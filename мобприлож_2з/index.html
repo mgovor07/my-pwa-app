@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="theme-color" content="#35424a">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#35424a">
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой простой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #87c3e9;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background: #3e6f83;
+            padding: 10px;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+        }
+        footer {
+            background: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h2>О моем сайте</h2>
+            <p>Это простой HTML сайт, который я использую как шаблон для своих проектов.</p>
+            <p>Говорухина Мария АА-24-10</p>
+        </section>
+        
+        <section>
+            <h2>Предметы</h2>
+            <ul>
+                <li>Основы разработки мобильных приложений</li>
+                <li>Монтаж и эксплуатация компьютерных сетей</li>
+                <li>Техническое обслуживание</li>
+                <li>Архитектура ЭВМ</li>
+                <li>Интернет-технологии</li>
+                <li>Дополнительные главы информатики</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Летняя практика &copy; 2025</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
